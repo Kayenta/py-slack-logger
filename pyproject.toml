@@ -22,3 +22,6 @@ classifiers = [
 homepage = "https://github.com/Kayenta/py-slack-logger"
 issues = "https://github.com/Kayenta/py-slack-logger/issues"
 source = "https://github.com/Kayenta/py-slack-logger"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "C90", "I", "N", "UP", "T20"]
