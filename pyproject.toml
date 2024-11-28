@@ -1,0 +1,24 @@
+[project]
+name = "py-slack-logger"
+version = "0.11.0"
+description = "Slack Logger is a custom message logger to Slack for Python 3"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "slack-sdk~=3.33",
+  "pyyaml~=6.0",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Chat",
+]
+
+[project.urls]
+homepage = "https://github.com/Kayenta/py-slack-logger"
+issues = "https://github.com/Kayenta/py-slack-logger/issues"
+source = "https://github.com/Kayenta/py-slack-logger"
