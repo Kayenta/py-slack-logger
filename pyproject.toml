@@ -19,9 +19,16 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = "https://github.com/Kayenta/py-slack-logger"
-issues = "https://github.com/Kayenta/py-slack-logger/issues"
-source = "https://github.com/Kayenta/py-slack-logger"
+Homepage = "https://pypi.org/project/py-slack-logger/"
+Issues = "https://github.com/Kayenta/py-slack-logger/issues"
+Source = "https://github.com/Kayenta/py-slack-logger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.ruff.lint]
 select = ["F", "E", "W", "C90", "I", "N", "UP", "T20"]
+
+[tool.hatch.build.targets.wheel]
+include = ["slack_logger"]
