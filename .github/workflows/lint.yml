@@ -12,6 +12,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - run: pip install pipenv && pipenv install --dev
+      - run: pip install pipenv --user && pipenv install --dev
       - run: pipenv run ruff check --output-format github
       - run: pipenv run ruff format --diff
