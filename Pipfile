@@ -4,4 +4,4 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-ruff = "==0.9.1"
+ruff = "==0.9.2"
