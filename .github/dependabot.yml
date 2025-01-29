@@ -10,7 +10,4 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "wednesday"
-      time: "01:00"
-      timezone: "Europe/London"
+      interval: "monthly"
