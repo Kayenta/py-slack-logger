@@ -11,11 +11,11 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-      - run: pip install build --user
-      - run: python3 -m build
+
+      - uses: ./.github/actions/setup_poetry
+
+      - run: poetry build
+
       - uses: actions/upload-artifact@v4
         with:
           name: python-package-distributions

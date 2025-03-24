@@ -1,0 +1,12 @@
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v5
+      id: setup-python
+      with:
+        python-version: "3.x"
+
+    - run: pipx install poetry~=2.1
+      env:
+        PIPX_DEFAULT_PYTHON: ${{ steps.setup-python.outputs.python-path }}
+      shell: bash
