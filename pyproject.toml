@@ -5,7 +5,7 @@ description = "Slack Logger is a custom message logger to Slack for Python 3"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "slack-sdk~=3.33",
+  "slack-sdk~=3.37",
   "pyyaml~=6.0",
 ]
 classifiers = [
@@ -33,7 +33,7 @@ packages = [{ include = "slack_logger" }]
 optional = true
 
 [tool.poetry.group.test.dependencies]
-ruff = "~=0.11.2"
+ruff = "~=0.14.4"
 
 [tool.ruff.lint]
 select = ["F", "E", "W", "C90", "I", "N", "UP", "ASYNC", "T20", "TC"]
