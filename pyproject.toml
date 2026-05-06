@@ -1,25 +1,26 @@
 [project]
 name = "py-slack-logger"
-version = "1.0.2"
+version = "1.0.3"
 description = "Slack Logger is a custom message logger to Slack for Python 3"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 dependencies = [
-  "slack-sdk~=3.37",
+  "slack-sdk~=3.41",
   "pyyaml~=6.0",
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Topic :: Communications :: Chat",
 ]
 
 [dependency-groups]
-test = [
-    "ruff~=0.14.4"
+dev = [
+    "ruff~=0.15.12"
 ]
 
 [project.urls]
@@ -28,14 +29,12 @@ Issues = "https://github.com/Kayenta/py-slack-logger/issues"
 Source = "https://github.com/Kayenta/py-slack-logger"
 
 [build-system]
-requires = ["poetry-core~=2.2"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build~=0.11.10"]
+build-backend = "uv_build"
 
-[tool.poetry]
-packages = [{ include = "slack_logger" }]
-
-[tool.poetry.group.test]
-optional = true
+[tool.uv.build-backend]
+module-name = "slack_logger"
+module-root = ""
 
 [tool.ruff.lint]
 select = ["F", "E", "W", "C90", "I", "N", "UP", "ASYNC", "T20", "TC"]
