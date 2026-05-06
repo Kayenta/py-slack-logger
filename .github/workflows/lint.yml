@@ -10,8 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: ./.github/actions/setup_poetry
-      - run: poetry install --only test
+      - uses: actions/setup-python@v6
+        with:
+          python-version-file: pyproject.toml
 
-      - run: poetry run ruff check --output-format github
-      - run: poetry run ruff format --diff
+      - uses: astral-sh/setup-uv@v8.1.0
+        with:
+          version: "0.11.x"
+      - run: uv sync --locked
+
+      - run: uv run ruff check --output-format github
+      - run: uv run ruff format --diff
