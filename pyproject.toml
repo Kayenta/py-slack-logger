@@ -1,13 +1,13 @@
 [project]
 name = "py-slack-logger"
-version = "1.0.3"
+version = "1.0.4"
 description = "Slack Logger is a custom message logger to Slack for Python 3"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.11"
 dependencies = [
-  "slack-sdk~=3.41",
+  "slack-sdk~=3.45",
   "pyyaml~=6.0",
 ]
 classifiers = [
@@ -20,7 +20,7 @@ classifiers = [
 
 [dependency-groups]
 dev = [
-    "ruff~=0.15.12"
+    "ruff~=0.17.1"
 ]
 
 [project.urls]

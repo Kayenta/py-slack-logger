@@ -41,16 +41,13 @@ options = {
     # This would usually be the name of the application sending the notification
     # If unset, the default value would be "Service"
     "service_name": "Backend API",
-
     # Usually services would run in staging and production environments
     # This field is to specify the environment from which the application is reponding for easy identification
     # If unset, this block would not appear in the message
     "service_environment": "Production",
-
     # An option to specify whether or not to display the hostname in the messages
     # The hostname is set by default, but it could be disabled by specifically setting this to `False`
     "display_hostname": True,
-
     # The default importance level of the message
     # The left bar color of the message would change depending on this
     # Available options are
